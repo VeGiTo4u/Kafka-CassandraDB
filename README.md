@@ -35,6 +35,7 @@ The pipeline is designed to simulate real-world streaming use cases, ensuring sc
 	•	Cassandra DB (AstraDB) – Managed Cassandra service for storage.
 	•	Python – For producer and consumer implementation.
 	•	CSV – Source data format.
+ 	•	Jupyter Notebook - To create and query table in CassandraDB
 
 ⸻
 
