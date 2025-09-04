@@ -54,6 +54,27 @@ The pipeline is designed to simulate real-world streaming use cases, ensuring sc
 	•	Data is stored for further querying and analytics.
 
 # **Repository Structure**
+```
+ecommerce-kafka-cassandra/
+│
+├── dataset/
+│   └── olist_orders_data.csv          # Source dataset (orders data)
+│
+├── scripts/
+│   ├── producer.py                    # Producer script (reads CSV, publishes to Kafka)
+│   ├── ecommerceorders.ipynb          # Jupyter notebook for analysis/experiments
+│   │
+│   └── consumer_group/                # Consumer group setup with Docker
+│       ├── Dockerfile                 # Docker image for consumer
+│       ├── consumer.py                # Consumer script (reads Kafka, writes to Cassandra)
+│       ├── docker-compose.yml         # Docker compose for scaling consumer instances
+│       └── orders-demo.ipynb          # Notebook for testing/validation
+│
+├── avro_schema.avsc                   # Avro schema for orders data
+│
+├── LICENSE                            # License file
+└── README.md                          # Project documentation
+```
 
 
 # **Key Learning Outcomes**
