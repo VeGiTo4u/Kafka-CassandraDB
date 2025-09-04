@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  consumer:
+    build: .
+    container_name: ecommerce_consumer
+    environment:
+      - KAFKA_BOOTSTRAP_SERVERS=pkc-41p56.asia-south1.gcp.confluent.cloud:9092
+      - KAFKA_SASL_MECHANISMS=PLAIN
+      - KAFKA_SECURITY_PROTOCOL=SASL_SSL
+      - KAFKA_SASL_USERNAME=HJVZZ7WIL5Y6S3XR
+      - KAFKA_SASL_PASSWORD=cfltKKfhdz8J6FLgJT50ASDqT5Uxd5Wbhg3Aeqn3fQl/x+kmA5XGPzGUCD+mqRIA
+      - KAFKA_GROUP_ID=ecommerce-consumer-group
+      - KAFKA_AUTO_OFFSET_RESET=earliest
+      - KAFKA_REPLICATION_FACTOR=10
+    restart: always
